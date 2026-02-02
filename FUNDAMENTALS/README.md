@@ -68,5 +68,20 @@
 - crypto (Password Hashing)
 - To import any module use "const module=require("module");".
 
+# Try-Catch (Sync)
+- try {
+    const data = fs.readFileSync("file.  txt");
+  } catch (err) {
+    console.log("File not found");
+  }
 
+# Async Try-Catch
+- async function loadFile() {
+  try {
+    const data = await fs.promises.readFile("file.txt", "utf-8");
+    console.log(data);
+  } catch (err) {
+    console.log("Error reading file");
+    }
+  }
 
