@@ -14,7 +14,7 @@
 
 - example:
 - code :
--  ```js
+- ```js
   console.log("Start");
   setTimeout(() => {
     console.log("Timeout Callback");
