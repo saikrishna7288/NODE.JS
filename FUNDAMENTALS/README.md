@@ -14,6 +14,7 @@
 
 - example:
 - code :
+-  ```js
   console.log("Start");
   setTimeout(() => {
     console.log("Timeout Callback");
@@ -33,7 +34,9 @@
 # PROMISES.
 - It is an object that represents success(reslove),failure(reject).
 - We use a Promise when a task takes time to complete and we want to handle its result later without blocking the program.
-- example syntax : User.findById(id).then(user => console.log(user));
+- example syntax : 
+- ```js
+  User.findById(id).then(user => console.log(user));
 
 # Async / Await.
 - Async / Await is a way to write asynchronous code in JavaScript that looks synchronous, without blocking the program.
@@ -42,22 +45,24 @@
 - same program using promise & Async/Await.
     1.promise (harder to read)
     code:
-    getUser()
-    .then(user => getOrders(user.id))
-    .then(orders => sendResponse(orders))
-    .catch(err => console.log(err));
+    - ```js
+      getUser()
+      .then(user => getOrders(user.id))
+      .then(orders => sendResponse  (orders))
+      .catch(err => console.log(err));
 
     2.Async/Await(clean)
     code :
-    async function handleRequest() {
-    try {
-      const user = await getUser();
-      const orders = await getOrders(user.id);
-      sendResponse(orders);
-    } catch (err) {
-      console.log(err);
-    }
-   }
+    - ```js
+      async function handleRequest() {
+      try {
+        const user = await getUser();
+        const orders = await getOrders  (user.id);
+        sendResponse(orders);
+      } catch (err) {
+        console.log(err);
+      }
+     }
 
 # An async function always returns a Promise.
 
@@ -69,7 +74,8 @@
 - To import any module use "const module=require("module");".
 
 # Try-Catch (Sync)
-- try {
+- ```js
+  try {
     const data = fs.readFileSync("file.  txt");
   } catch (err) {
     console.log("File not found");
