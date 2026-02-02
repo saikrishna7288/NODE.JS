@@ -76,7 +76,8 @@
   }
 
 # Async Try-Catch
-- async function loadFile() {
+- ```js 
+  async function loadFile() {
   try {
     const data = await fs.promises.readFile("file.txt", "utf-8");
     console.log(data);
