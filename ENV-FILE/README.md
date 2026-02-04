@@ -12,7 +12,7 @@
 - Create .env file:
 - ```js
     PORT=5000
-    MONGO_URI=mongodb+srv://user:pass@cluster.mongodb.net/app
+    MONGO_URI=mongodb+srv:
     JWT_SECRET=supersecretkey
 
 - Load environment variables(in index.js or app.js):
