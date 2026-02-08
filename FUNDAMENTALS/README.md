@@ -1,9 +1,18 @@
 # STRONG NODE.JS FOUNDATION
 
-# NODE JS IS A EVENT DRIVEN ARCHITECTURE.
+# NODE JS IS A SINGLE-THREADED EVENT DRIVEN ARCHITECTURE.
 - Event-Driven Architecture is a system where everything happens in response to EVENTS instead of step-by-step instructions.
+- single-threaded : instead of "Request → New Thread" ,it does "Request → Event Loop → Async Handling"
+
+# TYPES OF REQUESTS
+- 1.Non-Blocking(simple requests) : Do NOT require heavy external resources and it can be handled directly by Event Loop .
+- Blocking (Complex Requests) : Require external resources and involve I/O or heavy tasks
+
 # EVENT LOOP.
 - It is a mechanism in node.js that continously checks the call stack and queues  to decide what code to execute next,so that node.js can run non-blocking operations using single thread.
+- If task is:
+- Simple → executes immediately
+- Heavy → sends to thread pool
 
 - PRIORITY in checking & executing the tasks.
   call stack >> microtask queue >> callback queue.
@@ -66,6 +75,19 @@
 
 # An async function always returns a Promise.
 
+# Complete Flow of Node.js Architecture
+- ```js
+  Step-by-step Flow:
+  1️⃣ Client sends request
+  2️⃣ Node.js server receives it
+  3️⃣ Request stored in Event Queue
+  4️⃣ Event Loop picks request
+  5️⃣ If simple → executes immediately
+  6️⃣ If blocking → sends to Thread Pool / External Resource
+  7️⃣ When task completes → callback placed in queue
+  8️⃣ Event Loop executes callback
+  9️⃣ Response sent back to client
+
 # core modules.
 - fs (file system)
 - os (system info)
@@ -92,3 +114,5 @@
     }
   }
 
+# NODEMON
+- Nodemon (Node Monitor) is a development tool that Automatically restarts your Node.js server whenever you save changes in your code.
