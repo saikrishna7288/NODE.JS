@@ -24,3 +24,11 @@ npm (Node Package Manager) is used to:
 - Fast execution.
 - Large ecosystem.
 - Highly scalable.
+
+# Is Node.js really single-threaded?
+- Main JavaScript execution → Single-threaded
+- Uses event loop
+- But internally uses thread pool (libuv)
+
+# Thread pool ?
+- A collection of pre-created worker threads that are ready to perform background tasks.
