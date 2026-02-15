@@ -95,6 +95,52 @@
 - crypto (Password Hashing)
 - To import any module use "const module=require("module");".
 
+# Exports.
+- There are two main types of exports:
+- i.Named Exports — you can export multiple things.
+- ii.Default Export — you export one main thing per file(Only one default export is allowed per file).
+
+- Named Export.
+- ```js
+  math.js
+  // Named exports
+  export function add(a, b) {
+  return a + b;
+  }
+  export function subtract(a, b) {
+  return a - b;
+  }
+  export const pi = 3.14159;
+
+  app.js
+  // Import named exports (must use same  names or rename them)
+  import { add, subtract, pi } from './ math.js';
+  console.log(add(10, 5)); // 15
+  console.log(subtract(10, 5)); // 5
+  console.log(pi); // 3.14159
+
+- Default Export.
+- ```js
+  // Default export (math.js)
+  export default function add(a, b) {
+    return a + b;
+  }
+
+  //import 
+  import add from "./math.js";
+  console.log(add(5, 3));
+
+# Special variables:
+- _filename : It stores the absolute path of the current file, including the file name.
+- ```js
+  console.log("filename is :", __filename);
+  Output: filename is : C:\Users\Rakesh\Documents\nodejs\example1.js
+- _dirname :It stores the absolute path of the directory that contains the current file.
+- ```js
+  console.log("Directory name is :", __dirname);
+  Output: Directory name is :C:\Users\Rakesh\Documents\nodejs
+
+
 # Try-Catch (Sync)
 - ```js
   try {
