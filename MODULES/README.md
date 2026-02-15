@@ -41,3 +41,37 @@
     - Windows uses (\)
     - Linux/Mac uses (/)
     - Path module automatically handles this difference.
+
+# Path Module (Commonly used) Methods.
+
+- 1.path.basename() : Returns the file name from a full path(Extracts only the file name).
+
+- 2.path.dirname() : Returns the directory name.
+
+- 3.path.extname() : Returns the file extension(.js,.html,.txt....)Useful for checking file type.
+
+- 4.path.join() : Joins multiple path segments.
+- ```js 
+    path.join('folder', 'sub', 'file.txt')
+    // → 'folder/sub/file.txt'
+- 5.path.resolve() : Resolves path into an absolute path.
+
+- 6.path.normalize() : Cleans messy paths(Removes: . , .. ,Duplicate slashes).
+
+- 7.path.parse() : Breaks path into object details.
+- ```js
+    const info = path.parse('/user/local/test/data.txt');
+    console.log(info);
+    
+    o/p:
+    {
+    root: '/',
+    dir: '/user/local/test',
+    base: 'data.txt',
+    ext: '.txt',
+    name: 'data'
+    }
+
+- 8.path.format() : Opposite of parse(),Takes object and rebuilds path.
+
+- 9.path.isAbsolute() : Checks whether path is absolute.
