@@ -1,4 +1,3 @@
-# DAY-01
 
 # what is Node.js?
 Node.js is an cross-platform JavaScript runtime environment that allows you to run JavaScript outside the browser.
